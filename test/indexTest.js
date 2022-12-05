@@ -45,3 +45,17 @@ describe("index.js", () => {
     });
   })
 })
+
+const wrapAdjective = function (wrapper = "*") {
+  const message = function (string = "special") {
+      return `You are ${wrapper}${string}${wrapper}!`;
+  };
+    
+      return message;
+  };
+    
+  const result = wrapAdjective("||");
+    
+  const emphatic = result("a hard worker");
+    
+  console.log(emphatic);
